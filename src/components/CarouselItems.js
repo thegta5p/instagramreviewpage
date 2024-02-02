@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
-
-export const CarouselItems = ({item}) => {
+import Image from "next/image";
+export const CarouselItems = () => {
   return (
     <div>
-      <img src={item.image} alt={item.title} />
+       <Image className="size-min" src="/images/Instagram-Template-Fix.jpeg" alt="post1" width={500} height={500}/>
     </div>
   );
 }
+export default CarouselItems;

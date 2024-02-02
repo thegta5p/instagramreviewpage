@@ -3,6 +3,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from "next/image";
+import CarouselItems from './CarouselItems';
 
 export const posts = () => {
   const responsive = {
@@ -33,11 +34,11 @@ export const posts = () => {
   return (
     <>      
       <div>
-        <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}>
-          <Image className="size-min" src="/images/Instagram-Template-Fix.jpeg" alt="post1" width={500} height={500}/>
-          <Image className="size-min" src="/images/Instagram-Template-Fix.jpeg" alt="post1" width={500} height={500}/>
-          <div>Item 3</div>
-          <div>Item 4</div>
+        <Carousel className="" responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}>
+          <CarouselItems />
+          <CarouselItems />
+          <CarouselItems />
+          <CarouselItems />
         </Carousel>
       </div>
     </>
