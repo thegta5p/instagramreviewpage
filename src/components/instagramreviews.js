@@ -34,7 +34,7 @@ const InstagramReviews = () => {
         </div>
       </div>
       <div className="my-28 ml-2 mr-2">
-        <Image src="/images/Instagram_icon.png" alt="instagram" width={25} height={25} />
+        <Image src="/images/Instagram_logo_2016.webp" alt="instagram" width={25} height={25} />
       </div>
       <div className="my-28">
         <p className="text-xs">@sweettooth app</p>
