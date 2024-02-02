@@ -13,7 +13,7 @@ const InstagramReviews = () => {
     if (count < 45) {
       const interval = setInterval(() => {
         setCount((prevCount) => prevCount + 1);
-      }, 1000);
+      }, 100);
 
       return () => {
         clearInterval(interval);
@@ -43,9 +43,10 @@ const InstagramReviews = () => {
     <div className="mx-24">
       <Posts />
     </div>
-    <div>
-      <h1 className="text-center my-12 font-bold text-xl font-serif">Seller Reviews</h1>
-      <p className="text-center text-xs">test test test test test</p>
+    <div className="grid">
+      <h1 className="text-center mt-12 font-bold text-xl font-serif">Seller Reviews</h1>
+      <Image className="justify-self-center" src="/images/5-star-rating.svg" alt="5-star-rating" width={200} height={40} />
+      <p className="text-center mt-4 text-xs">test test test test test</p>
     </div>
   </>
   );
