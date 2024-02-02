@@ -9,7 +9,7 @@ const InstagramReviews = () => {
       <p className="font-serif text-xl font-bold">As seen on instagram</p>
       <p className="text-xs text-center mx-2">Tag #usesweettooth to be featured</p>
     </div>
-
+    
   </>
   );
 };
