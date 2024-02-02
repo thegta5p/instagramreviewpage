@@ -5,9 +5,6 @@ export default function Home() {
   return (
     <div>
       <InstagramReviews />
-      <div className="mx-24">
-        <Posts />
-      </div>
     </div>
   );
 }

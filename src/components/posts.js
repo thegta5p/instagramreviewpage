@@ -14,7 +14,7 @@ export const posts = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 4
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -25,12 +25,6 @@ export const posts = () => {
       items: 1
     }
   };
-  const items = [
-    {title: "post1",
-    description: "description1",
-    image: "image1",
-    },
-  ]
   return (
     <>      
       <div>
