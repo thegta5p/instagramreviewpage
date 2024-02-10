@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from "next/image";
 import CarouselItems from './CarouselItems';
+import jsonData from "../../data/jsonformatinstagram.json";
 
 export const posts = () => {
   const responsive = {
@@ -29,10 +30,10 @@ export const posts = () => {
     <>      
       <div>
         <Carousel className="" responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}>
-          <CarouselItems />
-          <CarouselItems />
-          <CarouselItems />
-          <CarouselItems />
+          {jsonData.posts.map(post => (
+            <CarouselItems key={post.id} post={post} />
+          
+          ))}
         </Carousel>
       </div>
     </>
