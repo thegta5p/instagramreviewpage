@@ -37,7 +37,7 @@ export const comments = ({numberOfComments}) => {
         {commentsToDisplay.map(comment => (
           <div key={comment.id}>
             <p className='text-center'>{comment.text}</p>
-            <p className='text-center'> - {comment.username}</p>
+            <p className='text-center'> - {comment.user.username}</p>
           </div>
         ))}
       </Carousel>
