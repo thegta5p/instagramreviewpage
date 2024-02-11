@@ -3,8 +3,10 @@ import React, {useState, useEffect} from "react";
 //import {Carousel} from "react-responsive-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Posts from "@/components/posts";
-import Image from "next/image";
+import Image from "next/image"
+import jsonData from "../../data/jsonformatinstagram.json";
 import "../app/globals.css";
+import Comments from "@/components/comments";
 
 const InstagramReviews = () => {
   const [count, setCount] = useState(0);
@@ -41,12 +43,14 @@ const InstagramReviews = () => {
       </div>
     </div>
     <div className="mx-24">
-      <Posts />
+      <Posts numberOfPosts={2}/>
     </div>
     <div className="grid">
       <h1 className="text-center mt-12 font-bold text-xl font-serif">Seller Reviews</h1>
       <Image className="justify-self-center" src="/images/5-star-rating.svg" alt="5-star-rating" width={200} height={40} />
-      <p className="text-center mt-4 text-xs">test test test test test</p>
+    </div>
+    <div className= "mx-24 mt-12">
+      <Comments numberOfComments={3}/>
     </div>
   </>
   );
