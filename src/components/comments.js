@@ -3,12 +3,14 @@ import jsonData from "../../data/jsonformatinstagram.json";
 import Carousel from 'react-multi-carousel';
 
 export const comments = ({numberOfComments}) => {
+  
+  const maxComments = 3;
 
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 3
+      items: {maxComments}
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -30,10 +32,12 @@ export const comments = ({numberOfComments}) => {
 
   const commentsToDisplay = allComments.slice(0, numberOfComments);
 
+  const displayComments = `flex ${numberOfComments < maxComments ? 'md:justify-center' : ''}`;
+
 
   return (
     <div>
-      <Carousel responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}> 
+      <Carousel className={displayComments} responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}> 
         {commentsToDisplay.map(comment => (
           <div key={comment.id}>
             <p className='text-center'>{comment.text}</p>
