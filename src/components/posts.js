@@ -27,11 +27,13 @@ export const posts = ({numberOfPosts}) => {
     }
   };
 
+  const displayPosts = `flex ${numberOfPosts < 5 ? 'md:justify-center' : ''}`;
+
   const postsToDisplay = jsonData.posts.slice(0, numberOfPosts);
   return (
     <>      
       <div>
-        <Carousel className="" responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}>
+        <Carousel className={displayPosts} responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}>
           {postsToDisplay.map(post => (
             <CarouselItems key={post.id} post={post} />          
           ))}
