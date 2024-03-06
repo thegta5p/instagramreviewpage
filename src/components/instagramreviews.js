@@ -27,8 +27,8 @@ const InstagramReviews = () => {
   <>
     <div className="flex ">
       <div className="flex flex-col items-center max-w-md md:ml-24 my-28 flex-auto">
-        <h1 className="font-serif text-base md:text-4xl font-bold">As seen on instagram</h1>
-        <p className="text-xs md:text-lg text-center mr-4">Tag #usesweettooth to be featured</p>
+        <h1 className="font-serif text-base md:text-4xl font-bold">Here are some reviews from our customers</h1>
+        <p className="text-xs md:text-lg text-center mr-4"></p>
       </div>
       <div className="my-28">
         <div class="notif">
@@ -47,7 +47,7 @@ const InstagramReviews = () => {
     </div>
     <div className="grid">
       <h1 className="text-center mt-12 font-bold text-xl font-serif">Seller Reviews</h1>
-      <Image className="justify-self-center" src="/images/5-star-rating.svg" alt="5-star-rating" width={200} height={40} />
+      <Image className="justify-self-center" src="/images/5star.gif" alt="5-star-rating" width={200} height={40} />
     </div>
     <div className= "mx-24 mt-12">
       <Comments numberOfComments={3}/>
