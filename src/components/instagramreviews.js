@@ -42,15 +42,11 @@ const InstagramReviews = () => {
         <p className="text-xs">@sweettooth app</p>
       </div>
     </div>
-    <div className="mx-24">
-      <Posts numberOfPosts={2}/>
+    <div className= "mx-24 mt-12">
+        <Posts numberOfPosts={9}/>
     </div>
     <div className="grid">
-      <h1 className="text-center mt-12 font-bold text-xl font-serif">Seller Reviews</h1>
       <Image className="justify-self-center" src="/images/5star.gif" alt="5-star-rating" width={200} height={40} />
-    </div>
-    <div className= "mx-24 mt-12">
-      <Comments numberOfComments={3}/>
     </div>
   </>
   );

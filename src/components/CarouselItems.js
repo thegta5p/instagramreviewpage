@@ -1,12 +1,17 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-export const CarouselItems = ({post}) => {
+import {Card, CardBody, CardHeader, CardFooter, Image, Avatar} from "@nextui-org/react";
+
+export const CarouselItems = ({review}) => {
   return (
-    <div>
-      <p className="text-center">Post by {post.user.username}</p>
-       <Image className="size-min mt-4 mb-12 px-4" src={post.image_url} alt={post.caption} width={500} height={500}/>
-       <p className="text-center">Likes: {post.likes}</p>
+    <div className="">
+      <Card shadow="none" className="items-center bg-red-50 md:w-4/5">
+        <CardBody>
+            <p className = "text-xs lg:text-base text-center">{review.review}</p>
+            <p className='font-bold text-sm lg:text-lg text-center'>By {review.username}</p>
+        </CardBody>
+        <Avatar src={review.profile_avatar} size="md"/>
+      </Card>
     </div>
   );
 }
