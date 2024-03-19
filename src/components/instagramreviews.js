@@ -27,7 +27,7 @@ const InstagramReviews = () => {
   <>
     <div className="flex ">
       <div className="flex flex-col items-center max-w-md md:ml-24 my-28 flex-auto">
-        <h1 className="font-serif text-base md:text-4xl font-bold">Here are some reviews from our customers</h1>
+        <h1 className="font-serif text-base md:text-4xl font-bold">Here are some reviews from our sellers</h1>
         <p className="text-xs md:text-lg text-center mr-4"></p>
       </div>
       <div className="my-28">
