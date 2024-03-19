@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import Image from "next/image";
 import CarouselItems from './CarouselItems';
 import jsonData from "../../data/jsonformatinstagram.json";
+import reviewData from "../../data/reviewdata.json";
 
 export const posts = ({numberOfPosts}) => {
   const responsive = {
@@ -15,7 +16,7 @@ export const posts = ({numberOfPosts}) => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 3
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -29,13 +30,13 @@ export const posts = ({numberOfPosts}) => {
 
   const displayPosts = `flex ${numberOfPosts < 5 ? 'md:justify-center' : ''}`;
 
-  const postsToDisplay = jsonData.posts.slice(0, numberOfPosts);
+  const postsToDisplay = reviewData.reviews.slice(0, numberOfPosts);
   return (
     <>      
-      <div>
-        <Carousel className={displayPosts} responsive={responsive} removeArrowOnDeviceType={["tablet", "mobile"]}>
-          {postsToDisplay.map(post => (
-            <CarouselItems key={post.id} post={post} />          
+      <div className=''>
+        <Carousel partialVisbile={false} className={displayPosts} responsive={responsive} autoPlay={true} infinite={true} itemClass="" removeArrowOnDeviceType={["tablet", "mobile"]}>
+          {postsToDisplay.map(review => (
+            <CarouselItems key={review.id} review={review} />          
           ))}
         </Carousel>
       </div>
